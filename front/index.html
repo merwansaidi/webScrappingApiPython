@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   
+    <script>
+        function showDiv() {
+        document.getElementById('welcomeDiv').style.display = "block";
+        }
+    </script>
+</head>
+
+<body style="background: content-box radial-gradient(crimson, skyblue);">
+    
+    <!-- NAVBAR -->
+    <div class="container mb-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">CMY'Football</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Compétitions</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Championnats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Equipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Joueurs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+
+    </div>
+    
+
+      <!-- CONTAINER 1 -->
+      <div class="container-fluid p-5">
+          <div class="row p-5">
+              <div class="col">
+                <h1>CMY'Football</h1>
+                <br />
+                <h2>Leader mondial des données dans le Football</h2>
+                <br>
+                <h3>Données détaillées du meilleur sport du monde.</h3>
+                <br>
+                <p>
+                    <button type="button" class="btn btn-primary"><a href="#container_2" class="text-light" style="text-decoration: none;">En savoir plus</a></button>
+                </p>
+            </div>
+          </div>
+      </div>
+
+      <!-- CONTAINER 2 -->
+      <div id="container_2" class="container-fluid p-5 bg-light">
+          <div class="row">
+              <div class="col-6 mx-auto text-center border border-dark">
+                  <h1 class="text-uppercase">A propos</h1>
+                  <p>Créée en 2020 par 3 étudiants en Big Data au sein de l'IPSSI amoureux du football, CMY'Football est une société spécialisée dans les données 
+                      footballistiques. Nous permettons à nos visiteurs d'avoir accès à une gamme très complète d'informations liées à ce sport.
+                      Compétitions, championnats, équipes, joueurs, tout y est !</p>
+
+                      <p>
+                      Chers amoureux du foot comme nous, amuse-toi bien sur notre plateforme ! <br>
+                       Et... HALA MADRID FREROT !
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <!-- CONTAINER 3 -->
+      <div id="container_3" class="container-fluid p-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-group">
+                    <div class="card m-3">
+                      <img src="img/competitions.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Compétitions</h5>
+                        <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                      </div>
+                    </div>
+                    <div class="card m-3">
+                      <img src="img/championnats.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Championnats</h5>
+                        <!-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> -->
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Championnat
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <input type="button" name="answer" value="Premier League" onclick="showDiv()" />
+                              <a class="dropdown-item" href="#">La Liga</a>
+                              <a class="dropdown-item" href="#">Serie A</a>
+                              <a class="dropdown-item" href="#">BundesLiga</a>
+                              <a class="dropdown-item" href="#">Ligue 1</a>
+                              
+                            </div>
+                            <div id="welcomeDiv"  style="display:none;" class="answer_list">
+                                <iframe src="https://datahub.io/sports-data/english-premier-league/r/0.html" width="100%" height="100%" frameborder="0"></iframe>
+                            </div>
+                                
+                            
+                          </div>
+                      </div>
+                    </div>                
+                </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card-group">
+                    <div class="card m-3">
+                      <img src="img/equipes.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Equipes</h5>
+                        <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                      </div>
+                    </div>
+                    <div class="card m-3">
+                      <img src="img/joueurs.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Joueurs</h5>
+                        <!-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> -->
+                      </div>
+                    </div>                
+                  </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- IFRAME -->
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Datas</h1>
+                <p id="datasPremierLeague">
+                    <iframe src="https://datahub.io/sports-data/english-premier-league/r/0.html" width="100%" height="100%" frameborder="0"></iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- CONTAINER 4 -->
+
+    <div class="container-fluid text-light p-5 bg-dark">
+        <div class="row">
+            <div class="col">
+                <h2>Formulaire de contact</h2>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Adresse e-mail</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="validationTextarea">Message</label>
+                        <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+                        <div class="invalid-feedback">
+                          Veuillez écrire un message.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>
