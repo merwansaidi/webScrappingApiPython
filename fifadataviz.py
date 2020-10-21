@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 
 
 
+vartest = 'test..test'
+
 
 
 # comment envoyer ces valeur à la fontion !!!
@@ -25,12 +27,13 @@ def createdataframes(season) :
 
 
 #    top x joueurs skill
-def topxskill(season, skill, x):
+def topskill(season, skill, top):
     df = createdataframes(season)
-    df = df.sort_values(by = skill,ascending = False).head(x)
+    df = df.sort_values(by = skill,ascending = False).head(top)
     print(df)
 
 
+# topskill(20, 'shooting', 5)
 
 #    > filtre skill, formule 3 champs de saisi ( liste des skill, opération, valeur )
 def filterByskill(saison, skill, val, op):
@@ -50,20 +53,23 @@ def filterByskill(saison, skill, val, op):
         print('no player for this condition')
 
 
+# filterByskill(20, 'potential', 90, '>')
+
 # best players by skill
 def bestPskill(season, skill):
     # skill = str(skill)
     df = createdataframes(season)
     maxs = df[skill].max()
     df_mask = df[str(skill)]=maxs
-    print(df_mask['short_name'])
+    print(df_mask)
 
+
+bestPskill(20, 'physic')
 
 def describe_player(season):
     df = createdataframes(season)
     df.describe()
 
-topxskill(20, 'pace', 20)
 
 # bestPskill(20, 'power_jumping')
 
