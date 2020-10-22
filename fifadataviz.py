@@ -4,6 +4,10 @@ import csv
 from IPython.display import display, HTML
 # from tabulate import tabulate
 import matplotlib.pyplot as plt
+from pprint import pprint
+
+from flask import Flask, render_template
+app = Flask(__name__)
 
 
 
@@ -30,10 +34,11 @@ def createdataframes(season) :
 def topskill(season, skill, top):
     df = createdataframes(season)
     df = df.sort_values(by = skill,ascending = False).head(top)
-    print(df)
+    return df
 
 
-# topskill(20, 'shooting', 5)
+A = topskill(20, 'shooting', 5)
+pprint(A)
 
 #    > filtre skill, formule 3 champs de saisi ( liste des skill, opération, valeur )
 def filterByskill(saison, skill, val, op):
@@ -64,11 +69,26 @@ def bestPskill(season, skill):
     print(df_mask)
 
 
-bestPskill(20, 'physic')
+#bestPskill(20, 'physic')
 
 def describe_player(season):
     df = createdataframes(season)
     df.describe()
+
+
+@app.route("/")
+def statistique():
+    return render_template("index.html", topskill = A.to_html())
+
+#def analysis(filename):
+    x = pd.DataFrame(np.random.randn(20, 5))
+    return render_template("analysis.html", name=filename, data=x.to_html())
+      
+
+if __name__ == "__main__":
+    app.run(debug = True)
+
+
 
 
 # bestPskill(20, 'power_jumping')
