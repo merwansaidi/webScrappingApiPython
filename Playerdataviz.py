@@ -18,9 +18,9 @@ def createdataframes(season) :
 
 
 #    top x joueurs skill
-def topskill(season, skill, top):
+def topskill(season, skill):
     df = createdataframes(season)
-    df = df.sort_values(by = str(skill),ascending = False).head(top)
+    df = df.sort_values(by = str(skill),ascending = False).head(10)
     print(df)
 
 
@@ -86,6 +86,8 @@ def playerevolutionbar(season, player, skill):
     plt.show()
 
 
+#playerevolutionbar(20, "L. Suárez", "passing")
+
 def playerevolutioncurve(season, player, skill):
     df20 = createdataframes(season)
     df19 = createdataframes(season-1)
@@ -100,12 +102,15 @@ def playerevolutioncurve(season, player, skill):
 
     df_evolution = pd.merge(df18new, df19new, on='short_name').merge(df20new, on='short_name')
     df_reduit = df_evolution[df_evolution['short_name']== str(player)][[str(skill)+"18", str(skill)+"19", str(skill)+"20"]]
-   
+
     x = [skill+" FIFA 18", skill+" FIFA 19", skill+" FIFA 20"]
     y = df_reduit.iloc[0].values
+
     plt.plot(x,y)
     plt.title(player+" "+skill+' Evolution')
     plt.show()
+
+
 
 
 
@@ -143,7 +148,7 @@ def playerevolutionAllcurve(season, player):
     plt.show()
 
 
-playerevolutionAllcurve(20, "M. Özil")
+playerevolutionAllcurve(20, "P. Pogba")
 
 # import matplotlib.pyplot as plt
 # fig = plt.figure()
