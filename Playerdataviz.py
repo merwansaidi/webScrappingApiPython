@@ -111,9 +111,6 @@ def playerevolutioncurve(season, player, skill):
     plt.show()
 
 
-
-
-
 def playerevolutionAllcurve(season, player):
     df20 = createdataframes(season)
     df19 = createdataframes(season-1)
@@ -137,13 +134,14 @@ def playerevolutionAllcurve(season, player):
     ydefend = df_reduit[["defending18", "defending19", "defending20"]].iloc[0].values
     yphys = df_reduit[["physic18", "physic19", "physic20"]].iloc[0].values
 
-    plt.plot(x,ypace)
-    plt.plot(x,yshoot)
-    plt.plot(x,ypass)
-    plt.plot(x,ydribl)
-    plt.plot(x,ydefend)
-    plt.plot(x,yphys)
+    plt.plot(x,ypace, label="pace")
+    plt.plot(x,yshoot, label="shooting")
+    plt.plot(x,ypass, label="passing")
+    plt.plot(x,ydribl, label="dribbling")
+    plt.plot(x,ydefend, label="defending")
+    plt.plot(x,yphys, label="physics")
     plt.title(player+' skills Evolution')
+    plt.legend()
     plt.grid(True)
     plt.show()
 
