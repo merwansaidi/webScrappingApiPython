@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMY'Football</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+
+<body style="background: content-box radial-gradient(crimson, skyblue);">
+    
+    <!-- NAVBAR -->
+    <div class="container mb-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">CMY'Football</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Joueurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sélections nationales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+
+    </div>
+
+    <!-- CONTAINER BANNIERE ACCUEIL -->
+    <div class="container-fluid p-5">
+        <div class="row p-5">
+            <div class="col">
+              <h1>CMY'Football</h1>
+              <br />
+              <h2>Leader mondial des données statistiques dans le Football</h2>
+              <br>
+              <h3>Données détaillées du meilleur sport du monde.</h3>
+              <br>
+              <p>
+                  <button type="button" class="btn btn-primary"><a href="#ccontainer_a-propos" class="text-light" style="text-decoration: none;">En savoir plus</a></button>
+              </p>
+          </div>
+        </div>
+    </div>
+
+    <!-- CONTAINER A PROPOS -->
+    <div id="container_a-propos" class="container-fluid p-5 bg-light">
+        <div class="row">
+            <div class="col-6 mx-auto text-center border border-dark">
+                <h1 class="text-uppercase">A propos</h1>
+                <p>Créée en 2020 par 3 étudiants en Big Data au sein de l'IPSSI amoureux du football, CMY'Football est une société spécialisée dans les données 
+                    footballistiques. Nous permettons à nos visiteurs d'avoir accès à une gamme très complète d'informations liées à ce sport.
+                    Sélections nationales et joueurs, tout y est !</p>
+
+                    <p>
+                    Chers amoureux du foot comme nous, amuse-toi bien sur notre plateforme à la "FIFA" !
+                      </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTAINER JOUEURS -->
+    <div class="container-fluid p-5">
+
+      <div class="row">
+        <div class="col-12">
+            <div class="card-group">
+              <div class="card mt-3 p-3">
+                <h5 class="card-title">Joueurs</h5>
+                <img src="https://sportmagazine.levif.be/medias/14532/7440385.jpg" class="card-img-top" alt="...">
+              </div>            
+            </div>
+        </div>
+      </div>
+
+      <div class="row bg-light p-3 m-1 rounded">
+
+        
+        <div class="col-12">
+          
+          <h1>Statistiques</h1>
+              
+              <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#joueurs10" aria-expanded="false" aria-controls="joueurs10">
+                  Les 10 meilleurs dribbleurs
+                </button>
+              </p>
+              <div class="collapse" id="joueurs10">
+                <div class="card card-body">
+                  <div class="col-12">
+                    <p>
+                      {{ dribbleurs | safe }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <br>
+              
+              <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#defenseurs10" aria-expanded="false" aria-controls="defenseurs10">
+                  Les 10 meilleurs passeurs
+                </button>
+              </p>
+              <div class="collapse" id="defenseurs10">
+                <div class="card card-body">
+                  <!-- Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. -->
+                  <div class="col-12">
+                    <p>
+                      <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. -->
+                      {{ passeurs | safe }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <br>
+              
+              <p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#passeurs10" aria-expanded="false" aria-controls="passeurs10">
+                  Les 10 meilleurs tireurs
+                </button>
+              </p>
+              <div class="collapse" id="passeurs10">
+                <div class="card card-body">
+                  <!-- Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. -->
+                  <div class="col-12">
+                    <p>
+                      <!-- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. -->
+                      {{ tireurs | safe }}
+                    </p>
+                  </div>
+              </div>
+
+              <br>
+            
+
+            </div>
+        </div>
+
+        <div class="col-12">
+          <h3>GRAPHIQUES</h3>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <img src="https://www.leparisien.fr/resizer/XIhs_TJz0sP9ZoDzrPkkKTlWZqo=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/5ZMULVYQFBMXBJE5SDIPV7QJLM.jpg" alt="">
+              </div>
+            </div>
+            
+            <p>
+              <h2>Evolution de Kylian M'Bappe</h2>
+              <p>
+                <img src="../static/mbappe.jpg" alt="Evolution Mbappe">
+              </p>
+            </p>
+
+            <p>
+              <h2>Evolution de Marcus Rashford</h2>
+              <p>
+                <img src="../static/rashford.jpg" alt="Evolution Rashford">
+              </p>
+            </p>
+
+            <p>
+              <h2>Evolution de Houssem Aouar</h2>
+              <p>
+                <img src="../static/aouar.jpg" alt="Evolution Aouar">
+              </p>
+            </p>
+
+          </div>
+        </div>
+
+          </div>
+            
+            
+          </div>
+          
+
+      </div>
+
+    </div>
+        
+    <!-- CONTAINER SELECTIONS NATIONALES  -->
+    <div class="container-fluid p-5">
+
+      <div class="row">
+        <div class="col">
+            <div class="card-group">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Selections nationales</h5>
+                  <img src="img/selections_nationales.jpg" class="card-img-top" alt="...">
+                  <!-- <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> -->
+                  
+                  
+    
+                </div>
+              </div> 
+                  
+                               
+            </div>
+      </div>
+      </div>
+
+      <div class="row bg-light p-3 m-1 rounded">
+
+        <div class="col">
+          
+          <div class="row">
+
+            <div class="col">
+              <h1>Statistiques</h1>
+          
+              <div class="choix-saison p-3">
+                <h3>Choix de la saison :</h3>
+
+                <div class="row">
+
+                  <div class="col-4">
+                    <img src="img/fifa-18.jpg" alt="">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="fifa18" value="option1">
+                      <label class="form-check-label" for="fifa18">
+                        FIFA 18
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="col-4">
+                    <img src="img/fifa-19.jpg" alt="">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="fifa19" value="option2">
+                      <label class="form-check-label" for="fifa19">
+                        FIFA 19
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="col-4">
+                    <img src="img/fifa-20.jpg" alt="">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="fifa20" value="option3">
+                      <label class="form-check-label" for="fifa20">
+                        FIFA 20
+                      </label>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="row p-3">
+
+          
+            <div class="col">
+              <h3>Critère de sélection :</h3>
+
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Aucun critère
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href=" ">Note générale moyenne</a>
+                  <a class="dropdown-item" href="">Moyenne d'âge</a>
+                  <a class="dropdown-item" href="">La plus rapide</a>
+                  <a class="dropdown-item" href="">La plus physique</a>
+                 
+                </div>
+              </div>
+            </div>
+            
+            
+                      
+          </div>
+          
+          <div class="row p-3">
+            <div class="col">
+              <h3>DATAFRAME</h3>
+              <div>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row p-3">
+            <div class="col">
+              <h3>GRAPHIQUE</h3>
+              <div>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+              </div>
+            </div>
+          </div>
+            
+            
+          </div>
+          
+
+      </div>
+
+    </div>
+    
+    <!-- CONTAINER CONTACT -->
+
+    <div class="container-fluid text-light p-5 bg-dark">
+        <div class="row">
+            <div class="col">
+                <h2>Formulaire de contact</h2>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Adresse e-mail</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="validationTextarea">Message</label>
+                        <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+                        <div class="invalid-feedback">
+                          Veuillez écrire un message.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>
